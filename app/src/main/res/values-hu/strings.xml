@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Neptunusz</string>
+    <string name="settings_title">Beállítások</string>
+    <string name="cd_back">Vissza</string>
+    <string name="cd_refresh">Frissítés</string>
+    <string name="cd_settings">Beállítások</string>
+    <string name="neptun_code">Neptun kód</string>
+    <string name="password">Jelszó</string>
+    <string name="totp_secret_label">2FA titkos kulcs, NEM a 6 jegyű szám!</string>
+    <string name="totp_secret_warning">Ne a 6 jegyű percenként változó számot add meg kétlépcsős kulcsként!\nA legtöbb 2FA alkalmazás (Google Hitelesítő, Microsoft Authenticator stb.) nem jeleníti meg az itt szükséges teljes 32 karakteres kódot.\n\n2FA BEÁLLÍTÁSA: link</string>
+    <string name="enable_2fa">Kétlépcsős azonosítás (2FA)</string>
+    <string name="save_credentials">Adatok mentése</string>
+</resources>

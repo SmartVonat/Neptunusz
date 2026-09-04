@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name" translatable="false">Neptunusz</string>
+    <string name="settings_title">Settings</string>
+    <string name="cd_back">Back</string>
+    <string name="cd_refresh">Refresh</string>
+    <string name="cd_settings">Settings</string>
+    <string name="neptun_code">Neptun Code</string>
+    <string name="password">Password</string>
+    <string name="totp_secret_label">2FA secret, NOT the number!</string>
+    <string name="totp_secret_warning">Do not use the 6 digit long changing number as two factor secret!\nMost 2FA apps (Google Authenticator, Microsoft Authenticator, etc) will not show you the full 32 character long code needed here.\n\nHOW TO SET UP 2FA: link</string>
+    <string name="enable_2fa">2 Factor Authentication (2FA)</string>
+    <string name="save_credentials">Save Login Info</string>
+</resources>

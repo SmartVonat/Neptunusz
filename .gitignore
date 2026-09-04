@@ -1,0 +1,57 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Built application files and caches
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+build/
+*/build/
+.gradle/
+
+# Local machine SDK / NDK path
+local.properties
+
+# Android Studio & IntelliJ
+*.iml
+.idea/workspace.xml
+.idea/caches/
+.idea/tasks.xml
+.idea/shelf/
+.idea/assetWizardSettings.xml
+.idea/deploymentTargetSelector.xml
+.idea/modules.xml
+
+# Keystores, keys, and credentials
+*.jks
+*.keystore
+*.key
+secrets.properties
+signing.properties
+
+# Native builds (NDK)
+.externalNativeBuild/
+.cxx/
+
+# Profiling & captures
+/captures/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
