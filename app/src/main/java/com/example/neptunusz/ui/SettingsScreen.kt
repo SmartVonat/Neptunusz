@@ -13,9 +13,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -114,6 +119,26 @@ fun SettingsScreen(
                 Text(
                     text = stringResource(R.string.totp_secret_warning),
                     style = MaterialTheme.typography.bodyMedium.copy(fontSize = 15.sp, lineHeight = 20.sp),
+                    color = MaterialTheme.colorScheme.error,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                val totpWarning2 = stringResource(R.string.totp_secret_warning_2)
+                val linkColor = MaterialTheme.colorScheme.error
+                val annotatedWarning2 = remember(totpWarning2, linkColor) {
+                    AnnotatedString.fromHtml(
+                        htmlString = totpWarning2,
+                        linkStyles = TextLinkStyles(
+                            style = SpanStyle(
+                                color = linkColor,
+                                textDecoration = TextDecoration.Underline
+                            )
+                        )
+                    )
+                }
+                Text(
+                    text = annotatedWarning2,
+                    style = MaterialTheme.typography.bodyMedium.copy(fontSize = 18.sp, lineHeight = 21.sp),
                     color = MaterialTheme.colorScheme.error,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.fillMaxWidth()

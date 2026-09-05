@@ -8,7 +8,8 @@
     <string name="neptun_code">Neptun kód</string>
     <string name="password">Jelszó</string>
     <string name="totp_secret_label">2FA titkos kulcs, NEM a 6 jegyű szám!</string>
-    <string name="totp_secret_warning">Ne a 6 jegyű percenként változó számot add meg kétlépcsős kulcsként!\nA legtöbb 2FA alkalmazás (Google Hitelesítő, Microsoft Authenticator stb.) nem jeleníti meg az itt szükséges teljes 32 karakteres kódot.\n\n2FA BEÁLLÍTÁSA: link</string>
+    <string name="totp_secret_warning">Ne a 6 jegyű percenként változó számot add meg kétlépcsős kulcsként! A legtöbb 2FA alkalmazás (Google Hitelesítő, Microsoft Authenticator stb.) nem jeleníti meg az itt szükséges teljes 32 karakteres kódot.</string>
+    <string name="totp_secret_warning_2"><![CDATA[<a href="https://github.com/SmartVonat/Neptunusz/blob/master/2%20factor%20authentication%20tutorial/Tutorial.md">2FA KÉTLÉPCSŐS HITELESÍTÉS BEÁLLÍTÁSA (link)</a>]]></string>
     <string name="enable_2fa">Kétlépcsős azonosítás (2FA)</string>
     <string name="save_credentials">Adatok mentése</string>
 </resources>

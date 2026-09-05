@@ -7,7 +7,8 @@
     <string name="neptun_code">Neptun Code</string>
     <string name="password">Password</string>
     <string name="totp_secret_label">2FA secret, NOT the number!</string>
-    <string name="totp_secret_warning">Do not use the 6 digit long changing number as two factor secret!\nMost 2FA apps (Google Authenticator, Microsoft Authenticator, etc) will not show you the full 32 character long code needed here.\n\nHOW TO SET UP 2FA: link</string>
+    <string name="totp_secret_warning">Do not use the 6 digit long changing number as two factor secret! Most 2FA apps (Google Authenticator, Microsoft Authenticator, etc) will not show you the full 32 character long code needed here.</string>
+    <string name="totp_secret_warning_2"><![CDATA[<a href="https://github.com/SmartVonat/Neptunusz/blob/master/2%20factor%20authentication%20tutorial/Tutorial.md">SETUP 2FA AUTHENTICATION (link)</a>]]></string>
     <string name="enable_2fa">2 Factor Authentication (2FA)</string>
     <string name="save_credentials">Save Login Info</string>
 </resources>
