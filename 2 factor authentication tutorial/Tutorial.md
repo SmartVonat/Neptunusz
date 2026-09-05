@@ -1,4 +1,4 @@
-
+# 2 lépcsős azonosítás beállítása a Neptunusz apphoz
 ## 1. lépés
 Nyisd meg a Neptunt asztali böngészőből, kattints a jobb felső profilra:
 
