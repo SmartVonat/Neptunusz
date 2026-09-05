@@ -11,7 +11,7 @@
 ## Az alkalmazásról:
 Unod, hogy minden alkalommal be kell írni a bejelentezési adatokat a Neptunba és fél óra múlva már kidob?
 Ezért készítettem ezt az alkalmazást, hogy a középiskolai kréta mobilalkalmazás használata után ennyivel is kevésbé legyen fájdalmas a neptun használata.
-Az alkalmazás nem változtat semmit a neptunon, csak megnitja a weboldalt és beléptet.
+Az alkalmazás nem változtat semmit a neptunon, csak megnyitja a weboldalt és beléptet.
 
 ### Kompatibilitás:
 Az alkalpazás Android 13-17 verziókon működik. Egyelőre csak az egységes bejelentkező felületet használó egyetemeken működik (az egyetemek többsége).
