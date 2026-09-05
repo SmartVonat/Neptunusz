@@ -13,7 +13,7 @@ Unod, hogy minden alkalommal be kell írni a bejelentezési adatokat a Neptunba 
 Ezért készítettem ezt az alkalmazást, hogy a középiskolai kréta mobilalkalmazás használata után ennyivel is kevésbé legyen fájdalmas a neptun használata.
 
 ### Kompatibilitás:
-Az alkalpazás Android xx-17 verziókon működik. Egyelőre csak az egységes bejelentkező felületet használó egyetemeken működik (az egyetemek többsége).
+Az alkalpazás Android 13-17 verziókon működik. Egyelőre csak az egységes bejelentkező felületet használó egyetemeken működik (az egyetemek többsége).
 
 ### Ha 2 lépcsős bejelentkezést használsz (2FA):
 A neptunusz használatához sajnos újra be kell állítanod a 2 lépcsős azonosítást: útmutató
