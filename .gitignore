@@ -42,6 +42,7 @@ local.properties
 *.jks
 *.keystore
 *.key
+keystore.properties
 secrets.properties
 signing.properties
 

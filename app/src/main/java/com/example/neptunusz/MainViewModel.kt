@@ -19,6 +19,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val secureStorage = SecureStorageManager(application)
 
+    private val initialHasCredentials = secureStorage.hasSavedCredentialsQuickCheck
+
     val credentials: StateFlow<UserCredentials> = secureStorage.credentialsFlow
         .stateIn(
             scope = viewModelScope,
@@ -32,7 +34,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         credentials,
         userSettingsOverride,
     ) { creds, override ->
-        val showSettings = override ?: !creds.hasCredentials
+        val hasCreds = creds.hasCredentials || initialHasCredentials
+        val showSettings = override ?: !hasCreds
         AppUiState(
             hasCredentials = creds.hasCredentials,
             showSettings = showSettings,
@@ -40,7 +43,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.Eagerly,
-        initialValue = AppUiState(hasCredentials = false, showSettings = true),
+        initialValue = AppUiState(
+            hasCredentials = initialHasCredentials,
+            showSettings = !initialHasCredentials,
+        ),
     )
 
     fun saveCredentials(neptunCode: String, pass: String, secret: String) {
@@ -55,7 +61,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun closeSettings() {
-        if (credentials.value.hasCredentials) {
+        if (credentials.value.hasCredentials || initialHasCredentials) {
             userSettingsOverride.value = false
         }
     }

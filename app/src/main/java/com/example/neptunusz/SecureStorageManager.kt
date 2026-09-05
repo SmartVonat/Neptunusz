@@ -26,18 +26,35 @@ class SecureStorageManager(private val context: Context) {
         private val KEY_NEPTUN_CODE = stringPreferencesKey("neptun_code")
         private val KEY_PASSWORD = stringPreferencesKey("password")
         private val KEY_TOTP_SECRET = stringPreferencesKey("totp_secret")
+        private const val PREFS_NAME = "app_prefs"
+        private const val KEY_HAS_CREDENTIALS = "has_credentials"
+    }
+
+    private val sharedPrefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+
+    val hasSavedCredentialsQuickCheck: Boolean
+        get() = sharedPrefs.getBoolean(KEY_HAS_CREDENTIALS, false)
+
+    fun setHasSavedCredentialsQuickCheck(hasCredentials: Boolean) {
+        sharedPrefs.edit().putBoolean(KEY_HAS_CREDENTIALS, hasCredentials).apply()
     }
 
     val credentialsFlow: Flow<UserCredentials> = context.dataStore.data.map { prefs ->
-        UserCredentials(
+        val creds = UserCredentials(
             neptunCode = prefs[KEY_NEPTUN_CODE] ?: "",
             password = prefs[KEY_PASSWORD] ?: "",
             totpSecret = prefs[KEY_TOTP_SECRET] ?: "",
         )
+        if (creds.hasCredentials != hasSavedCredentialsQuickCheck) {
+            setHasSavedCredentialsQuickCheck(creds.hasCredentials)
+        }
+        creds
     }
 
     suspend fun saveCredentials(neptunCode: String, password: String, totpSecret: String) {
         val cleanTotpSecret = totpSecret.replace("\\s".toRegex(), "")
+        val hasCreds = neptunCode.isNotBlank() && password.isNotBlank()
+        setHasSavedCredentialsQuickCheck(hasCreds)
         context.dataStore.edit { prefs ->
             prefs[KEY_NEPTUN_CODE] = neptunCode
             prefs[KEY_PASSWORD] = password
@@ -47,6 +64,7 @@ class SecureStorageManager(private val context: Context) {
 
     @Suppress("unused")
     suspend fun clearCredentials() {
+        setHasSavedCredentialsQuickCheck(false)
         context.dataStore.edit { prefs ->
             prefs.clear()
         }

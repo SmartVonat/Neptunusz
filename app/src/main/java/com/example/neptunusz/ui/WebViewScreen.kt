@@ -19,6 +19,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.viewinterop.AndroidView
 import com.example.neptunusz.MainViewModel
 import com.example.neptunusz.R
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 
 import androidx.compose.ui.tooling.preview.Preview
 
@@ -39,6 +41,7 @@ fun WebViewScreen(
 ) {
     var webView: WebView? by remember { mutableStateOf(null) }
     var canGoBack by remember { mutableStateOf(false) }
+    val scope = rememberCoroutineScope()
 
     Scaffold(
         topBar = {
@@ -80,7 +83,10 @@ fun WebViewScreen(
                             canGoBack = view.canGoBack()
                             
                             if (url.contains(LOGIN_URL_KEYWORD)) {
-                                injectCredentials(view, viewModel)
+                                scope.launch {
+                                    viewModel.credentials.first { it.hasCredentials }
+                                    injectCredentials(view, viewModel)
+                                }
                             }
                             // Ensure cookies are flushed
                             CookieManager.getInstance().flush()
