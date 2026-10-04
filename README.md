@@ -14,7 +14,7 @@ Ezért készítettem ezt az alkalmazást, hogy a középiskolai kréta mobilalka
 Az alkalmazás nem változtat semmit a neptunon, csak megnyitja a weboldalt és beléptet.
 
 ### Kompatibilitás:
-Az alkalpazás Android 13-17 verziókon működik. Egyelőre csak az egységes bejelentkező felületet használó egyetemeken működik (az egyetemek többsége).
+Az alkalmazás Android 13-17 verziókon működik. Egyelőre csak az egységes bejelentkező felületet használó egyetemeken működik (az egyetemek többsége).
 
 ### Ha 2 lépcsős bejelentkezést használsz (2FA):
 A neptunusz használatához sajnos újra be kell állítanod a 2 lépcsős azonosítást: [Útmutató](https://github.com/SmartVonat/Neptunusz/blob/master/2%20factor%20authentication%20tutorial/Tutorial.md)
