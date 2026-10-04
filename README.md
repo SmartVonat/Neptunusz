@@ -4,7 +4,7 @@
 >### Jogi nyilatkozat / Felelősségkizárás
 >Ez a szoftver egy független, nyílt forráskódú projekt, amely **semmilyen formában nem áll kapcsolatban az SDA Informatika Zrt.-vel**, a Neptun rendszer fejlesztőjével vagy bármely felsőoktatási intézménnyel.
 >* **Védjegyek:** A „Neptun” név, logó és az ahhoz kapcsolódó megjelölések az SDA Informatika Zrt. bejegyzett védjegyei. A név használata kizárólag a tájékoztatásra szolgál.
->* **Adatbiztonság:** Az alkalmazás közvetlenül az Android eszközödöön fut, semmilyen bejelentkezési adatot (felhasználónév, jelszó, 2 faktoros kód) vagy személyes információt nem gyűjt és nem továbbít harmadik fél részére.
+>* **Adatbiztonság:** Az alkalmazás közvetlenül az Android eszközödön fut, semmilyen bejelentkezési adatot (felhasználónév, jelszó, 2 faktoros kód) vagy személyes információt nem gyűjt és nem továbbít harmadik fél részére.
 >* **Felelősség:** Az alkalmazást mindenki kizárólag a saját felelősségére használhatja. A készítő semmilyen felelősséget nem vállal az alkalmazás használatából fakadó esetleges hibákért.
 
 
